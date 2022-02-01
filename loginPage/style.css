@@ -1,0 +1,102 @@
+img#logoHeader {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+
+h1#menu{
+    background-color: rgb(217,76,102);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(0, 0, 0);
+    /* height:20px; */
+    align-items: center;
+}
+
+form {
+    margin-top: 200px !important;
+    margin: auto;
+    display: block;
+    width: 400px;
+    padding: 16px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    
+    
+}
+
+form div + div {
+    margin-top: 16px;
+}
+
+label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    /* display: inline-block; */
+    margin: auto;
+    font: 16px sans-serif;
+    display: block;
+    width: 200px;
+    text-align: left;
+    
+}
+
+input {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    margin-top: -15px !important;
+    padding: 5px;
+    font: 16px sans-serif;    
+    width: 200px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    /* margin-left: 50px; */
+    margin: auto;
+    display: block;
+}
+
+input:focus{
+    outline: none !important;
+    border:2px solid rgb(217,76,102);
+    box-shadow: 2px 2px #000000;
+}
+
+button {
+    border-radius: 5px;
+    background-color: rgb(217,76,102);
+    color: white;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    font-weight: bolder;
+    /* text-shadow: 1px 1px 1px black; */
+    text-align: center;
+    display: block;
+    margin: auto;
+    font: 15px sans-serif;
+}
+
+label#forgot{
+    color: blue;
+    margin-top: 10px;
+    font: 12px sans-serif;
+    display: block;
+    width: 200px;
+    text-align: left;
+    font-weight: bold;
+}
+
+section{
+  vertical-align: middle !important;
+
+}
+
+footer{
+    text-align: center;
+    font: 15px sans-serif;
+}
+
+button:hover{
+    background-color:  rgb(169, 56, 77);
+    color: white;
+}

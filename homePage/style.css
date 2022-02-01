@@ -27,41 +27,7 @@ button{
     /* font-style: bold;  */
     /* align-items: center; */
 }
-/* button#home{
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    padding: 14px 25px;
-    width: 200px;
-    font-size: 25px;
-    text-align: center;
-    font-weight: 500;
-    
-}
 
-button#login{
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    padding: 14px 25px;
-    width: 200px;
-    font-size: 25px;
-    text-align: center;
-    font-weight: 500;
-    
-} 
-
-button#register{
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    padding: 14px 25px;
-    width: 200px;
-    font-size: 25px;
-    text-align: center;
-    font-weight: 500;
-    
-} */
 
 button#home:hover{
     background-color:  rgb(217,76,102);
