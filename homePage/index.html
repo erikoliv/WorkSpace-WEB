@@ -1,37 +1,76 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
     <title>TramposLim</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../homePage/index.css">
 </head>
 
-
 <body>
-    <header>
-        <img id="logoHeader" src="art\logoHeader.png" alt="TramposLim Logo" onclick="location.href = 'index.html';">
-        <h1 id="menu">
-            <button id="home" onclick=homeDirect() value="Button">
-                Inicio
-            </button>
-    
-            <button id="login" onclick=userLogin() value="Button">
-                Login
-            </button>
-    
-            <button id="register" onclick=userRegister() value="Button">
-                Registrar
-            </button>
-        </h1>
-    
-        <script src="script.js"></script>
-    </header>
+
+
+    <main>
+
+        <div class="container">
+
+            <header class="p-3 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="m-3 align-items-left">
+                    <img class="d-block mx-auto mb-4" src="../homePage/art/trampolimHeader.png" alt="TramposLim Logo" width="90" height="75">
+                </div>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 p-3">
+                    <li><a href="#" id="home-button" class="nav-link px-2 text-primary">Início</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Bla</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Bla</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Sobre</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control form-control-primary" placeholder="Pesquise..." aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" id="login-button" onclick='location.href = "../signinPage/signin.html"' class="btn btn-outline-primary me-2 link-dark">Entrar</button>
+                    <button type="button" id="signin-button" onclick='location.href = "../registerPage/register.html"' class="btn btn btn-primary">Registrar</button>
+                </div>
+
+            </header>
+        </div>
+        <div class="b-example-divider"></div>
+
+
+    </main>
+
+
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
-<Footer>
-    
-</Footer>
+
 </html>

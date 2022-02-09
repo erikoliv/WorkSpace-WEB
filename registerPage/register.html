@@ -1,1 +1,180 @@
-pagina de registro
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>TramposLim - Register</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="../registerPage/register.css">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img id="logo" onclick="location.href='../homePage/index.html'" class="d-block mx-auto mb-4" src="../homePage/art/trampolimHeader.png" alt="TramposLim Logo" width="90" height="75">
+                <h2>Criar conta</h2>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <form class="needs-validation" novalidate action="" method="post" id="formCandidate">
+                        <div class="row g-3">
+                            <div class="col-sm-4">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" placeholder="Nome" value="" required>
+                                <div class="invalid-feedback">
+                                    Um nome válido é necessário.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="CPF" class="form-label">CPF</label>
+                                <input type="text" class="form-control" id="CPF" placeholder="CPF" value="" required>
+                                <div class="invalid-feedback">
+                                    Um CPF válido é necessário.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="phone" class="form-label">Telefone/Celular</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Telefone/Celular" value="" required>
+                                <div class="invalid-feedback">
+                                    Um telefone válido é necessário.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="email" class="form-label">E-mail </label>
+                                <input type="email" class="form-control" id="email" placeholder="voce@dominio.com" value="" required>
+                                <div class="invalid-feedback">
+                                    Um e-mail válido é necessário.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="username" class="form-label">Login</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">@</span>
+                                    <input type="username" class="form-control" id="username" placeholder="Login" required>
+                                    <div class="invalid-feedback">
+                                        Um login válido é necessário.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="password" class="form-label">Senha</label>
+                                <div class="input-group has-validation">
+                                    <!-- <span class="input-group-text">@</span> -->
+                                    <input type="new-password" class="form-control" id="password" placeholder="Senha" required>
+                                    <div class="invalid-feedback" id="invalidpassword">
+                                        Uma senha válida é necessária.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <hr class="my-1"> -->
+                            <div class="col-md-6">
+                                <label for="cep" class="form-label">CEP</label>
+                                <input maxlength=9 minlength=8 onblur="pesquisaCEP()" type="text" class="form-control" id="cep" placeholder="12345-678">
+                                <div class="invalid-feedback">
+                                    CEP necessário.
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="logradouro" class="form-label">Rua</label>
+                                <input type="text" class="form-control" id="logradouro" placeholder="Rua">
+                                <div class="invalid-feedback">
+                                    Por favor preencha com sua Rua.
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="complemento" class="form-label">Complemento</label>
+                                <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+                                <div class="invalid-feedback">
+                                    Por favor preencha com o Complemento.
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="bairro" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                                <div class="invalid-feedback">
+                                    Por ravor preencha com o Bairro.
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="localidade" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="localidade" placeholder="Cidade">
+                                <div class="invalid-feedback">
+                                    Por favor preencha com a Cidade.
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="uf" class="form-label">Estado</label>
+                                <input type="text" class="form-control" id="uf" placeholder="Estado">
+                                <div class="invalid-feedback">
+                                    Por favor preencha com o Estado.
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-md-6">
+                                <label for="Country" class="form-label">Country</label>
+                                <input type="text" class="form-control" id="Country" placeholder="Brazil">
+                                <div class="invalid-feedback">
+                                    Please enter your Country.
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <hr class="my-5">
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-lg" type="submit" id="create-account-button">
+                                Create Account</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2022 CrienTec</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../registerPage/register.js"></script>
+</body>
+
+</html>
