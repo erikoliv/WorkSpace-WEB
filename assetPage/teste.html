@@ -9,20 +9,21 @@
 </head>
 
 <body>
-    <input classe="botao" type="button" onclick=teste() value="botão">
-    <h1 id="valores" value="teste"> teste </h1>
+    <input classe="botao" type="button" onclick=agoravai() value="botão">
+    <h1 id="valores" value="teste"></h1>
 
     <script>
-        async function teste() {
+        async function agoravai() {
             fetch(`http://127.0.0.1:3000/`)
                 .then(response => {
                     response.json()
                         .then(data => {
+                            var sValue = ""
+                            data.forEach(element => {
+                                sValue += (element.colaborador)
+                            });
                             document.getElementById("valores").innerHTML = JSON.stringify(data)
-                                // console.log(data)
-                                // alert(JSON.stringify(data))
                         })
-
                 })
         }
     </script>
