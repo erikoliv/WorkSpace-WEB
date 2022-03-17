@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Teste</title>
 </head>
 
 <body>
     <input classe="botao" type="button" onclick=teste() value="botão">
+    <h1 id="valores" value="teste"> teste </h1>
 
     <script>
         async function teste() {
@@ -17,8 +18,9 @@
                 .then(response => {
                     response.json()
                         .then(data => {
-                            console.log(data)
-                            alert(JSON.stringify(data))
+                            document.getElementById("valores").innerHTML = JSON.stringify(data)
+                                // console.log(data)
+                                // alert(JSON.stringify(data))
                         })
 
                 })

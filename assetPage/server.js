@@ -9,9 +9,8 @@ app.use(cors())
 app.get('/', async(req, res) => {
     const result = await select()
     return res.json(result)
-        // res.send('Hello World!')
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Listening on port ${port}`)
 })

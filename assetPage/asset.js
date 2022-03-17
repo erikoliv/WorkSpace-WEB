@@ -13,35 +13,25 @@
                     event.preventDefault()
                     event.stopPropagation()
                 }
-
                 form.classList.add('was-validated')
             }, false)
         })
 })()
 
 function pesquisaCEP() {
-
     let cep = document.querySelector("#cep").value
-
-
-    // if (cep.lenght < 9) {
-    //     alert(cep.lenght)
-    // } else {
-    //     alert(cep.lenght)
-    // }
-
     if (cep != "") {
-        preencheCep(cep);
-
+        if (cep.length >= 8) {
+            preencheCep(cep)
+        } else {
+            limpaCEP()
+        }
     } else {
-        //cep sem valor, limpa o formu
-        // limpaCEP();
-        // alert("CEP VAZIO.");
+        limpaCEP()
     }
 }
 
 function preencheCep(cep) {
-
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(response => {
             response.json()
@@ -58,9 +48,9 @@ function preencheCep(cep) {
 }
 
 function limpaCEP() {
-    document.querySelector("#rua" + campo).value = ("");
-    document.querySelector("#complemento" + campo).value = ("");
-    document.querySelector("#bairro" + campo).value = ("");
-    document.querySelector("#cidade" + campo).value = ("");
-    document.querySelector("#uf" + campo).value = ("");
+    document.getElementById("rua").setAttribute(value, "vazio")
+    document.getElementById("complemento").setAttribute(value, "vazio")
+    document.getElementById("bairro").setAttribute(value, "vazio")
+    document.getElementById("cidade").setAttribute(value, "vazio")
+    document.getElementById("uf").setAttribute(value, "vazio")
 }
