@@ -11,11 +11,26 @@ async function connect() {
 
 const select = async() => {
     const conn = await connect();
-    const [rows] = await conn.query('SELECT * FROM ptax');
+    const [rows] = await conn.query('SELECT * FROM master');
     // console.log(rows)
     return rows;
 }
 module.exports = select
+
+const findByAtivo = async(ativo) => {
+    const conn = await connect();
+    const [rows] = await conn.query(`SELECT * FROM master WHERE Ativo = "${ativo}"`);
+    return rows.pop();
+}
+module.exports = findByAtivo
+
+// const insertAtivo = async(ativo, hostname) => {
+//     const conn = await connect();
+//     const result = await conn.query(`INSERT INTO usuarios(codigo, nome) VALUES("${ativo}", "${hostname}")`);
+//     return result;
+// }
+// module.exports = insertAtivo
+
 
 // connect()
 // select()

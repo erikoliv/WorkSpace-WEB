@@ -18,39 +18,56 @@
         })
 })()
 
-function pesquisaCEP() {
-    let cep = document.querySelector("#cep").value
-    if (cep != "") {
-        if (cep.length >= 8) {
-            preencheCep(cep)
-        } else {
-            limpaCEP()
-        }
-    } else {
-        limpaCEP()
+
+    async function agoravai() {
+            // Select no banco
+            ativo = document.getElementById("ativo").value
+            fetch(`http://127.0.0.1:3000/ativo/${ativo}`)
+            .then(response => {
+                response.json()
+                    .then(data => {
+                        console.log(data)
+                        document.getElementById("hostname").value = data.Hostname
+                        document.getElementById('classe-select').options[0].innerHTML = data.Classe;
+                        document.getElementById('modelo-select').options[0].innerHTML = data.Modelo;
+                        document.getElementById('descricao-select').options[0].innerHTML = data.Descricao;
+                        document.getElementById("part-number").value = data.PartNumber
+                        document.getElementById("numero-serie").value = data.NumeroSerie
+                        document.getElementById("perifericos").value = data.Perifericos
+                        document.getElementById('fabricante-select').options[0].innerHTML = data.Fabricante;
+                        document.getElementById('fornecedor-select').options[0].innerHTML = data.Fornecedor;
+                        document.getElementById("data-recebimento").value = data.DataRecebimento
+                        document.getElementById("data-entrega").value = data.DataEntrega
+                        document.getElementById("data-vencimento").value = data.Vencimento
+                        document.getElementById('exercicio-select').options[0].innerHTML = data.Exercicio;
+                        document.getElementById("carta-remessa").value = data.CartaRemessa
+                        document.getElementById("NF-remessa").value = data.NFRemessa
+                        document.getElementById("NF-venda").value = data.NFVenda
+                        document.getElementById('contrato-select').options[0].innerHTML = data.Contrato;
+                        document.getElementById("cr-servico").value = data.CrServico
+                        document.getElementById("usuario").value = data.Usuario
+                        document.getElementById('unidade-select').options[0].innerHTML = data.Unidade;
+                        document.getElementById("local").value = data.Local
+                        document.getElementById("chamado-servico").value = data.ChamadoServico
+                        document.getElementById("ID").value = data.ID
+                        document.getElementById("resumo").value = data.Resumo
+                        document.getElementById("observacao").value = data.Observacao
+                        document.getElementById('servico-select').options[0].innerHTML = data.Servico;
+                        document.getElementById('status-select').options[0].innerHTML = data.Status;
+                        document.getElementById("operacao").value = data.Operacao
+
+                        // console.log(data.DataRecebimento)
+                    })
+            })
+                        
+                        
+                        
+                        // var sValue = ""
+                        // data.forEach(element => {
+                        //     sValue += (element.colaborador)
+                        // });
+                        // document.getElementById("valores").innerHTML = JSON.stringify(data[1])
+                        // document.getElementById("valores").innerHTML = data[1].Ativo
+                    
+            
     }
-}
-
-function preencheCep(cep) {
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(response => {
-            response.json()
-                .then(data => showData(data))
-        })
-
-    const showData = (result) => {
-        for (const campo in result) {
-            if (document.querySelector("#" + campo)) {
-                document.querySelector("#" + campo).value = result[campo]
-            }
-        }
-    }
-}
-
-function limpaCEP() {
-    document.getElementById("rua").setAttribute(value, "vazio")
-    document.getElementById("complemento").setAttribute(value, "vazio")
-    document.getElementById("bairro").setAttribute(value, "vazio")
-    document.getElementById("cidade").setAttribute(value, "vazio")
-    document.getElementById("uf").setAttribute(value, "vazio")
-}

@@ -14,15 +14,26 @@
 
     <script>
         async function agoravai() {
-            fetch(`http://127.0.0.1:3000/`)
+            // Insert no banco
+            // fetch("http://127.0.0.1:3000/ativo", {
+            //     method: "POST",
+            //     headers: new Headers({
+            //         'content-type': 'application/json'}),
+            //     body: JSON.stringify({
+            //         ativo: "12345S",
+            //         hostname: "NB12345S"
+            //     })
+            // });
+            
+            
+            
+            // Select no banco
+            fetch(`http://127.0.0.1:3000/ativo/00003S`)
                 .then(response => {
                     response.json()
                         .then(data => {
-                            var sValue = ""
-                            data.forEach(element => {
-                                sValue += (element.colaborador)
-                            });
-                            document.getElementById("valores").innerHTML = JSON.stringify(data)
+                            console.log(data)
+                            document.getElementById("valores").innerHTML = data.Fornecedor
                         })
                 })
         }
