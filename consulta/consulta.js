@@ -21,12 +21,13 @@
 
     async function agoravai() {
             // Select no banco
-            ativo = document.getElementById("ativo").value
+            ativo = document.getElementById("pesquisar").value
             fetch(`http://127.0.0.1:3000/ativo/${ativo}`)
             .then(response => {
                 response.json()
                     .then(data => {
                         console.log(data)
+                        document.getElementById("ativo").value = data.Ativo
                         document.getElementById("hostname").value = data.Hostname
                         document.getElementById('classe-select').options[0].innerHTML = data.Classe;
                         document.getElementById('modelo-select').options[0].innerHTML = data.Modelo;
@@ -55,6 +56,13 @@
                         document.getElementById('servico-select').options[0].innerHTML = data.Servico;
                         document.getElementById('status-select').options[0].innerHTML = data.Status;
                         document.getElementById("operacao").value = data.Operacao
+                        document.getElementById("cr-cobranca").value = data.CrCobranca
+                        document.getElementById("chamado-entrega").value = data.ChamadoEntrega
+                        document.getElementById("valor-dolar").value = data.ValorDolar
+                        document.getElementById("valor-ptax").value = data.ValorPtax
+                        document.getElementById("valor-reais").value = data.ValorReais
+                        document.getElementById("lote").value = data.Lote
+                        document.getElementById('contratoE-select').options[0].innerHTML = data.ContratoEmbraer;
 
                         // console.log(data.DataRecebimento)
                     })

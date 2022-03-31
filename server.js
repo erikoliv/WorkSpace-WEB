@@ -2,7 +2,7 @@ const select = require("./db")
 const findByAtivo = require("./db")
 const insertAtivo = require("./db")
 const express = require('express')
-const cors = require('cors')
+const cors = require("cors")
 const app = express()
 const port = 3000
 
