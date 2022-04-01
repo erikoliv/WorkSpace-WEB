@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydata">
+        <b>Pesquisa</b>
+        <table id="myTableData" border="1" cellpadding="2">
+            <tr>
+                <td>Ativo</td>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        // function addRow(aaaa, aaaa, aa) {
+                // valor = "computador1"
+                // fetch(`http://127.0.0.1:3000/count/${valor}`)
+                // .then(response => {
+                //     response.json()
+                //     .then(data => {
+                //         console.log(data)
+                //     })
+                // })
+                            
+                for (var i=0; i<5; i++){
+                var myName = document.getElementById("name");
+                var age = document.getElementById("age");
+                var table = document.getElementById("myTableData");
+                
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+            
+                row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+                row.insertCell(1).innerHTML= "aaaaaaa"
+                row.insertCell(2).innerHTML= "bbbbbbbbbbb";
+                row.insertCell(3).innerHTML= 'blabla';
+                console.log(i);
+                }
+                
+    </script>       
+    </body>
+</html>
+
+
+<!-- select count(vc.Name)
+ 
+
+from vcomputer vc -->
+

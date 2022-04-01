@@ -67,15 +67,5 @@
                         // console.log(data.DataRecebimento)
                     })
             })
-                        
-                        
-                        
-                        // var sValue = ""
-                        // data.forEach(element => {
-                        //     sValue += (element.colaborador)
-                        // });
-                        // document.getElementById("valores").innerHTML = JSON.stringify(data[1])
-                        // document.getElementById("valores").innerHTML = data[1].Ativo
-                    
-            
+                                                                                   
     }
