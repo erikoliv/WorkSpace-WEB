@@ -1,7 +1,7 @@
-const select = require("./db")
-const findByAtivo = require("./db")
-const insertAtivo = require("./db")
-const lineCount = require("./db")
+
+// const insertAtivo = require("./db")
+const findByAtivo = require("./Querys/findByAtivo")
+const lineCount = require("./Querys/lineCount")
 const express = require('express')
 const cors = require("cors")
 const app = express()
@@ -10,21 +10,14 @@ const port = 3000
 app.use(cors())
 app.use(express.json())
 
-// app.get('/', async(req, res) => {
-//     const result = await select()
-//     return res.json(result)
-// })
-
-
-// app.get('/ativo/:ativo', async (req, res) => {
-//     console.log("Qqr coisa")
-//     const { ativo } = req.params
-//     const result = await findByAtivo(ativo)
-//     return res.json(result)
-// })
+app.get('/ativo/:ativo', async (req, res) => {
+    const { ativo } = req.params
+    const result = await findByAtivo(ativo)
+    console.log(result)
+    return res.json(result)
+})
 
 app.get('/count/:valor', async (req, res) => {
-    console.log("Count")
     const { valor } = req.params
     const result = await lineCount(valor)
     console.log(result)

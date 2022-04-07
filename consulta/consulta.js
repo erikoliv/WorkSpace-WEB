@@ -23,7 +23,7 @@ const { Alert } = require("bootstrap")
 
 async function consultar() {
     // Select no banco
-    ativo = document.getElementById("pesquisar").value
+        ativo = document.getElementById("pesquisar").value
         fetch(`http://127.0.0.1:3000/ativo/${ativo}`)
         .then(response => {
             response.json()

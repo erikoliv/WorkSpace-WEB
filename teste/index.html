@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>WorkSpace</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+    
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+    
+    
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="../consulta/consulta.css">
+    </head>
 
 <body>
-    <div id="mydata">
-        <b>Pesquisa</b>
-        <table id="myTableData" border="1" cellpadding="2">
-            <tr>
-                <td>Ativo</td>
-                <td>Name</td>
-                <td>Age</td>
-            </tr>
-        </table>
+    <div class="col-sm-2">
+        <input type="search" class="form-control" id="pesquisar" placeholder=""
+            list="historico" value="" required>
+        <div class="invalid-feedback">
+            Um ativo válido é necessário.
+        </div>
+        <datalist id="historico">
+            <!-- <option value="Teste"></option> -->
+        </datalist>
     </div>
-    <script>
-        function consulta() {
-            valor = document.getElementById("consulta").value
-            fetch(`http://127.0.0.1:3000/count/${valor}`)
-                .then(response => {
-                    response.json()
-                        .then(data => {
-                            for (var i = 0; i <= data.Valor; i++) {
-                                var myName = document.getElementById("name");
-                                var age = document.getElementById("age");
-                                var table = document.getElementById("myTableData");
 
-                                var rowCount = table.rows.length;
-                                var row = table.insertRow(rowCount);
+    <div class="col-sm-2">
+        <button type="button" id="consultar-button" onclick="consulta()"
+            class="btn btn-primary btn">Consultar</button>
+    </div>
+    <hr class="my-1 mt-4">
+    <table id = "assetTable" class="table table-hover table-bordered">
+        <!-- <thead>
+          <tr>
+            <th scope="col">Ativo</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead> -->
+        <tbody>
+            <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+        </tbody>
+      </table>
 
-                                row.insertCell(0).innerHTML = '<input type="button" value = "NB12345s" onClick="Javacsript:deleteRow(this)">';
-                                row.insertCell(1).innerHTML = "Notebook"
-                                row.insertCell(2).innerHTML = "High Level";
-                                row.insertCell(3).innerHTML = 'Engenharia';
-                            }
-
-                        })
-                })
-        }
-
-    </script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/teste/index.js"></script>
 </body>
-
 </html>
