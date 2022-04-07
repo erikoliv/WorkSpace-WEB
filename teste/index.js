@@ -16,8 +16,18 @@ function consulta() {
                         row.insertCell(2).innerHTML = "High Level"
                         row.insertCell(3).innerHTML = "Engenharia"
                     }
-                
+
 
                 })
         })
+
+        
+
+
+
+
+
+
+
+
 }
