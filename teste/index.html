@@ -1,73 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <title>WorkSpace</title>
-    
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    
-        <style>
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-            }
-    
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-        </style>
-    
-    
-        <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="../consulta/consulta.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>WorkSpace</title>
 
-<body>
-    <div class="col-sm-2">
-        <input type="search" class="form-control" id="pesquisar" placeholder=""
-            list="historico" value="" required>
-        <div class="invalid-feedback">
-            Um ativo válido é necessário.
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/teste/index.css">
+</head>
+
+<body class="bg-light">
+    <main class="container">
+        <header class="pt-4 pb-3 d-flex flex-wrap justify-content-lg-start">
+            <div id="label-create-account" class="text-anchor">
+                <h5>Busca</h5>
+            </div>
+        </header>
+        <div class="row align-items-center">
+            <div class="col">
+                <form class="needs-validation" novalidate action="" method="post" id="">
+                    <div class="row g-3">
+                        <div class="col-sm-3">
+                            <input type="search" class="form-control" id="pesquisar" placeholder="" list="historico"
+                                value="" required>
+                            <datalist id="historico">
+                                <!-- <option value="Teste"></option> -->
+                            </datalist>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button type="button" id="consultar-button" onclick="consulta()"
+                                class="btn btn-primary btn">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <datalist id="historico">
-            <!-- <option value="Teste"></option> -->
-        </datalist>
-    </div>
 
-    <div class="col-sm-2">
-        <button type="button" id="consultar-button" onclick="consulta()"
-            class="btn btn-primary btn">Consultar</button>
-    </div>
-    <hr class="my-4">
-    <table id = "assetTable" class="table table-hover table-bordered">
-        <!-- <thead>
+        <hr class="my-4">
+        <table id="assetTable" class="table table-hover table-bordered">
+            <!-- <thead>
           <tr>
             <th scope="col">Ativo</th>
-            <th scope="col">Ativo</th>
-            <th scope="col">Ativo</th>
-            <th scope="col">Ativo</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
           </tr>
         </thead> -->
-        <tbody>
-            <tr>
-                <th scope="col">Ativo</th>
-                <th scope="col">Ativo</th>
-                <th scope="col">Ativo</th>
-                <th scope="col">Ativo</th>
-              </tr>
-        </tbody>
-      </table>
+            <tbody>
+                <tr class="Clickable-row">
+                    <th scope="col">Ativo</th>
+                    <th scope="col">Hostname</th>
+                    <th scope="col">Classe</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Part Number</th>
+                    <th scope="col">Numero de Série</th>
+                    <th scope="col">Perifericos</th>
+                    <th scope="col">Fabricante</th>
+                    <th scope="col">Fornecedor</th>
+                    <th scope="col">DataRecebimento</th>
+                    <th scope="col">DataEntrega</th>
+                    <th scope="col">Vencimento</th>
+                    <th scope="col">Exercicio</th>
+                    <th scope="col">CartaRemessa</th>
+                    <th scope="col">NFRemessa</th>
+                    <th scope="col">NFVenda</th>
+                    <th scope="col">Contrato</th>
+                    <th scope="col">CrServico</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Local</th>
+                    <th scope="col">ChamadoServico</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Resumo</th>
+                    <th scope="col">Observação</th>
+                    <th scope="col">Servico</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Operação</th>
+                    <th scope="col">CrCobranca</th>
+                    <th scope="col">ChamadoEntrega</th>
+                    <th scope="col">ValorDolar</th>
+                    <th scope="col">ValorPtax</th>
+                    <th scope="col">ValorReais</th>
+                    <th scope="col">Lote</th>
+                    <th scope="col">ContratoEmbraer</th>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2022 Stefanini IT Solutions</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/teste/index.js"></script>
+
 </body>
+
 </html>
