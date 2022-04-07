@@ -33,55 +33,36 @@
 
 <body class="bg-light">
     <main class="container">
-        <header class="p-3 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <!-- <div class="m-3 align-items-left">
-                <img class="d-block mx-auto mb-4" src="../homePage/art/trampolimHeader.png" alt="TramposLim Logo" width="90" height="75">
+
+        <header class="pt-4 pb-3 d-flex flex-wrap justify-content-lg-start">
+            <div id="label-create-account" class="text-anchor">
+                <h5>Consulta</h5>
             </div>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 p-3">
-                <li><a href="../homePage/index.html" id="home-button" class="nav-link px-2 text-primary">Início</a></li> -->
-            <!-- <li><a href="#" class="nav-link px-2 link-dark">Bla</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Bla</a></li> -->
-            <!-- <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-                <li><a href="/aboutPage/about.html" id="about-button" class="nav-link px-2 link-dark">Sobre</a></li>
-            </ul>
-
-            <div class="text-end">
-                <button type="button" id="login-button" onclick='location.href = "../signinPage/signin.html"' class="btn btn-outline-primary me-2 link-dark">Entrar</button>
-                <button type="button" id="signin-button" onclick='location.href = "../registerPage/register.html"' class="btn btn btn-primary">Registrar</button>
-            </div> -->
         </header>
-
-
-        <div id="label-create-account" class="py-3 text-anchor">
-            <!-- <img id="logo" onclick="location.href='../homePage/index.html'" class="d-block mx-auto mb-4" src="../homePage/art/trampolimHeader.png" alt="TramposLim Logo" width="90" height="75"> -->
-            <h5>Consulta</h5>
-
-        </div>
 
         <div class="row align-items-center">
             <div class="col">
                 <form class="needs-validation" novalidate action="" method="post" id="">
                     <div class="row g-3">
-                        <div class="col-sm-2 col-md-3">
-                            <label for="pesquisar" class="form-label">Pesquisar</label>
-                            <input type="text" class="form-control" id="pesquisar" placeholder="Pesquisar" value=""
-                                required>
+
+                        <div class="col-sm-2">
+                            <input type="search" class="form-control" id="pesquisar" placeholder=""
+                                list="historico" value="" required>
                             <div class="invalid-feedback">
                                 Um ativo válido é necessário.
                             </div>
+                            <datalist id="historico">
+                                <!-- <option value="Teste"></option> -->
+                            </datalist>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>
 
-        <hr class="my-3">
+                        <div class="col-sm-2">
+                            <button type="button" id="consultar-button" onclick="consultar()"
+                                class="btn btn-primary btn">Consultar</button>
+                        </div>
 
-        <div class="row align-items-center">
-            <div class="col">
-                <form class="needs-validation" novalidate action="" method="post" id="">
-                    <div class="row g-3">
+                        <hr class="my-1 mt-4">
+
                         <div class="col-sm-2">
                             <label for="ativo" class="form-label">Ativo</label>
                             <input type="text" class="form-control" id="ativo" placeholder="Ativo" value="" required>
@@ -414,14 +395,14 @@
                             </select>
                         </div>
 
-                        <div class="container">
+                        <!-- <div class="container">
                             <div class="text-end">
                                 <button type="button" id="cadastrar-button" onclick=""
                                     class="btn btn-primary">Cadastrar</button>
                                 <button type="button" id="consultar-button" onclick="agoravai()"
                                     class="btn btn-primary">Consultar</button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </form>
             </div>
@@ -442,7 +423,7 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/consulta/consulta.js"></script>
 
-    <script>
+    <!-- <script>
         document.getElementById("pesquisar")
             .addEventListener("keyup", function (event) {
                 event.preventDefault();
@@ -450,7 +431,7 @@
                 document.getElementById("consultar-button").click();
                 // }
             });
-    </script>
+    </script> -->
 
 </body>
 

@@ -16,19 +16,20 @@ app.use(express.json())
 // })
 
 
-app.get('/ativo/:ativo', async (req, res) => {
-    console.log("Qqr coisa")
-    const { ativo } = req.params
-    const result = await findByAtivo(ativo)
-    return res.json(result)
-})
-
-// app.get('/count/:valor', async (req, res) => {
-//     console.log("Count")
-//     const { valor } = req.params
-//     const result = await lineCount(valor)
+// app.get('/ativo/:ativo', async (req, res) => {
+//     console.log("Qqr coisa")
+//     const { ativo } = req.params
+//     const result = await findByAtivo(ativo)
 //     return res.json(result)
 // })
+
+app.get('/count/:valor', async (req, res) => {
+    console.log("Count")
+    const { valor } = req.params
+    const result = await lineCount(valor)
+    console.log(result)
+    return res.json(result)
+})
 
 // app.post('/ativo', async(req, res) => {
 //     console.log("Outra coisa")
