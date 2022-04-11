@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en-us">
 
 <head>
     <meta charset="utf-8">
@@ -45,14 +45,14 @@
                 <form class="needs-validation" novalidate action="" method="post" id="">
                     <div class="row g-3">
 
-                        <div class="col-sm-2">
+                        <!-- <div class="col-sm-2">
                             <input type="search" class="form-control" id="pesquisar" placeholder=""
                                 list="historico" value="" required>
                             <div class="invalid-feedback">
                                 Um ativo válido é necessário.
                             </div>
                             <datalist id="historico">
-                                <!-- <option value="Teste"></option> -->
+                                <option value="Teste"></option>
                             </datalist>
                         </div>
 
@@ -61,7 +61,7 @@
                                 class="btn btn-primary btn">Consultar</button>
                         </div>
 
-                        <hr class="my-1 mt-4">
+                        <hr class="my-1 mt-4"> -->
 
                         <div class="col-sm-2">
                             <label for="ativo" class="form-label">Ativo</label>
@@ -419,19 +419,12 @@
     </footer>
     </div>
 
-    <!-- <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script> -->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/consulta/consulta.js"></script>
 
-    <!-- <script>
-        document.getElementById("pesquisar")
-            .addEventListener("keyup", function (event) {
-                event.preventDefault();
-                // if (event.keyCode == '13') {
-                document.getElementById("consultar-button").click();
-                // }
-            });
-    </script> -->
+    <script>
+        window.onload(consultar())
+    </script>
 
 </body>
 
