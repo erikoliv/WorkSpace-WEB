@@ -1,6 +1,27 @@
+var table = $('#assetTable').DataTable({
+    dom: 'Bfrtip',
+    select: false,
+    buttons: [
+        {
+            text: 'Abrir',
+        }
+    ],
+    data: "",
+    columns: [
+        { title: "Ativo" },
+        { title: "Hostname" },
+        { title: "Classe" },
+        { title: "Modelo" },
+        { title: "Descrição" }
+    ]
+})
+
 function consulta() {
     valor = document.getElementById("pesquisar").value
-    fetch(`http://127.0.0.1:3000/count/${valor}`)
+    if(!(valor.length == 0)) {
+    table.destroy()
+    console.log(valor.length)
+        fetch(`http://127.0.0.1:3000/count/${valor}`)
         .then(response => {
             response.json()
                 .then(data => {
@@ -19,7 +40,6 @@ function consulta() {
                                     var data = assetData[0]
                                     localStorage.setItem("storageName", data[0])
                                     window.open("/consulta/consulta.html")
-                                    // console.log(data[0])
                                 }
                             }
                         ],
@@ -34,5 +54,9 @@ function consulta() {
                     }).clear().rows.add(array).draw()
                 })
         })
+    } else{
+        alert("Campo de busca vazio!")
+    }
+    
 }
 

@@ -21,15 +21,12 @@ const { Alert } = require("bootstrap")
     })()
 
 
-async function consultar() {
+async function consultar(ativo) {
     // Select no banco
-    // ativo = document.getElementById("pesquisar").value
-    ativo = localStorage.getItem("storageName")
     fetch(`http://127.0.0.1:3000/ativo/${ativo}`)
         .then(response => {
             response.json()
                 .then(data => {
-                    console.log(data)
                     document.getElementById("ativo").value = data.Ativo
                     document.getElementById("hostname").value = data.Hostname
                     document.getElementById('classe-select').options[0].innerHTML = data.Classe;

@@ -423,7 +423,8 @@
     <script src="/consulta/consulta.js"></script>
 
     <script>
-        window.onload(consultar())
+        ativo = localStorage.getItem("storageName")
+        window.onload(consultar(ativo))
     </script>
 
 </body>
