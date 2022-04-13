@@ -1,16 +1,10 @@
 .container {
-    /* max-width: 960px; */
-    /* max-width: 1080px; */
+    max-width: 960px;
 }
 
 #logo:hover {
     cursor: pointer;
 }
-
-
-/* #home-button {
-    color: rgb(217, 76, 102) !important;
-} */
 
 #home-button:hover {
     font-weight: bold;
