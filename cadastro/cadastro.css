@@ -1,0 +1,24 @@
+.container {
+    max-width: 1200px;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#home-button:hover {
+    font-weight: bold;
+}
+
+#about-button:hover {
+    font-weight: bold;
+}
+
+.needs-validation #invalidpassword {
+    margin-bottom: 8%;
+}
+
+#rateio {
+    margin-top: 50px;
+}
+
