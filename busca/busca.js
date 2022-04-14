@@ -70,10 +70,17 @@ function consulta() {
                             menuSelector: "#contextMenu",
                             menuSelected: function (invokedOn, selectedMenu) {
                                 if (selectedMenu.text() == "Abrir") {
-                                    localStorage.setItem("storageName", invokedOn.text())
+                                    var asset = table.row(invokedOn).data();
+                                    localStorage.setItem("storageName", asset[0])
                                     window.open("/consulta/consulta.html", "", "popup")
                                 };
                             }
+                        });
+
+                        $('#assetTable tbody').on('dblclick', 'tr', function () {
+                            var asset = table.row(this).data();
+                            localStorage.setItem("storageName", asset[0])
+                            window.open("/consulta/consulta.html", "", "popup")
                         });
                     })
             });
@@ -142,3 +149,9 @@ function consulta() {
     };
 })(jQuery, window);
 
+$("#pesquisar").keyup(function (event) {
+    event.preventDefault()
+    if (event.keyCode === 13) {
+        $("#consultar-button").click()
+    }
+})

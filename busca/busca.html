@@ -34,7 +34,7 @@
 
     <!-- Custom styles for this template -->
     <!-- <link href="/home/sidebars.css" rel="stylesheet" -->
-    <link rel="stylesheet" href="/home/sidebars.css">
+    <link rel="stylesheet" href="/busca/sidebars.css">
     <link rel="stylesheet" href="/busca/busca.css">
 </head>
 
@@ -88,6 +88,7 @@
                         </svg>
                         Home
                     </a>
+
                 </li>
                 <li>
                     <a href="#" class="nav-link active link-dark">
@@ -95,10 +96,42 @@
                             <use xlink:href="#speedometer2" />
                         </svg>
                         Consulta
+
                     </a>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#home" />
+                                </svg>
+                                Opção 1
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#home" />
+                                </svg>
+                                Opção 2
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#home" />
+                                </svg>
+                                Opção 3
+                            </a>
+                        </li>
+                    </ul>
+
                 </li>
                 <li>
-                    <a href="#" class="nav-link link-dark">
+                    <a href="/cadastro/cadastro.html" class="nav-link link-dark">
                         <svg class="bi me-2" width="16" height="16">
                             <use xlink:href="#table" />
                         </svg>
@@ -117,6 +150,7 @@
         </div>
         <div class="b-example-divider"></div>
 
+        <!-- INICIO DA TABELA -->
         <div id="mainTable" class="container">
             <header class="pt-4 pb-3 d-flex flex-wrap justify-content-lg-start">
                 <div id="label-create-account" class="text-anchor">
@@ -125,22 +159,20 @@
             </header>
             <div class="row align-items-center">
                 <div class="col">
-                    <form class="needs-validation" novalidate action="" method="post" id="">
-                        <div class="row g-3">
-                            <div class="col-sm-3">
-                                <input type="search" class="form-control" id="pesquisar" placeholder="" list="historico"
-                                    value="" required>
-                                <datalist id="historico">
-                                    <!-- <option value="Teste"></option> -->
-                                </datalist>
-                            </div>
-
-                            <div class="col-sm-2">
-                                <button type="button" id="consultar-button" onclick="consulta()"
-                                    class="btn btn-primary btn">Pesquisar</button>
-                            </div>
+                    <div class="row g-3">
+                        <div class="col-sm-3">
+                            <input type="search" class="form-control" id="pesquisar" placeholder="" list="historico"
+                                value="" required>
+                            <datalist id="historico">
+                                <!-- <option value="Teste"></option> -->
+                            </datalist>
                         </div>
-                    </form>
+
+                        <div class="col-sm-2">
+                            <button type="button" id="consultar-button" onclick="consulta()"
+                                class="btn btn-primary btn">Pesquisar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -178,34 +210,18 @@
     <script src="/node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
     <script src="/node_modules/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
     <script src="/node_modules/datatables.net-select-bs5/js/select.bootstrap5.min.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
     <!-- Custom scripts for this page -->
     <script src="/busca/busca.js"></script>
 
     <!-- Custom scripts for this page -->
-    <script src="/home/sidebars.js"></script>
+    <script src="/busca/sidebars.js"></script>
 
 </body>
 
