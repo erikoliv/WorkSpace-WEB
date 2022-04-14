@@ -5,28 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <!-- Bootstrap core CSS -->
-     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- DataTables core CSS -->
+
+    <link rel="stylesheet" href="/node_modules/datatables.net-select-bs5/css/select.bootstrap5.min.css">
+    <link rel="stylesheet" href="/node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="/node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <!-- <link href="/home/sidebars.css" rel="stylesheet" -->
+    <link rel="stylesheet" href="/home/sidebars.css">
+    <link rel="stylesheet" href="/busca/busca.css">
 </head>
 
 <body>
     <style>
-        body {padding: 120px}
+        body {padding: 10px}
     </style>
      
+    <main>
     <div class="card shadow p-5" style="width: 1200px">
+      <div>
+        <input type="checkbox" id="checkbox">
+        <label id="btn" class="btn" for="checkbox"><i class="fa fa-bars"></i> <span>Menu</span></label>
+  
+        <div class="sidebar">
+            <ul>
+                <a href="#">
+                    <li><i class="fa fa-tachometer"></i>AddressBook</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-lightbulb-o"></i>Gerenciar Popup</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-line-chart"></i>Edição Rápida</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-television"></i>Gerenciar Ptax</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-send"></i>Tabela Preço</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-wpforms"></i>Gerenciar controles</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-paint-brush"></i>Acessos</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-file-text-o"></i>Opções de interface</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-globe"></i>Sair</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+
+
         <div class="card-body">
           <div class="text-left mb-5">
             <a href="#" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cadastro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>Cadastro de ativos
           </div>
           <div class="text-center mb-5">
-            <a href="/consulta/consulta.html" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consulta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>Consulta de ativos
+            <a href="/busca/busca.html" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consulta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>Consulta de ativos
           </div>
           <div class="text-end mb-5">
             <a href="#" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relatório&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>Relatório de ativos
           </div>
         </div>
     </div>
+    </main>
+   
     <!-- <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script> -->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

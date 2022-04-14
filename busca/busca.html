@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/node_modules/datatables.net-select-bs5/css/select.bootstrap5.min.css">
     <link rel="stylesheet" href="/node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="/node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
     <style>
         .bd-placeholder-img {
@@ -78,7 +79,6 @@
             </div>
         </div>
 
-        <!-- INICIO DA TABELA -->
         <div id="mainTable" class="container">
             <header class="pt-4 pb-3 d-flex flex-wrap justify-content-lg-start">
                 <div id="label-create-account" class="text-anchor">
@@ -87,20 +87,22 @@
             </header>
             <div class="row align-items-center">
                 <div class="col">
-                    <div class="row g-3">
-                        <div class="col-sm-3">
-                            <input type="search" class="form-control" id="pesquisar" placeholder="" list="historico"
-                                value="" required>
-                            <datalist id="historico">
-                                <!-- <option value="Teste"></option> -->
-                            </datalist>
-                        </div>
+                    <form class="needs-validation" novalidate action="" method="post" id="">
+                        <div class="row g-3">
+                            <div class="col-sm-3">
+                                <input type="search" class="form-control" id="pesquisar" placeholder="" list="historico"
+                                    value="" required>
+                                <datalist id="historico">
+                                    <!-- <option value="Teste"></option> -->
+                                </datalist>
+                            </div>
 
-                        <div class="col-sm-2">
-                            <button type="button" id="consultar-button" onclick="consulta()"
-                                class="btn btn-primary btn">Pesquisar</button>
+                            <div class="col-sm-2">
+                                <button type="button" id="consultar-button" onclick="consulta()"
+                                    class="btn btn-primary btn">Pesquisar</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
@@ -145,11 +147,27 @@
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Custom scripts for this page -->
     <script src="/busca/busca.js"></script>
 
     <!-- Custom scripts for this page -->
-    <script src="/busca/sidebars.js"></script>
+    <script src="/home/sidebars.js"></script>
 
 </body>
 
