@@ -94,11 +94,8 @@ function consulta() {
 }
 
 (function context($, window) {
-
     $.fn.contextMenu = function (settings) {
-
         return this.each(function () {
-
             // Open context menu
             $(this).on("contextmenu", function (e) {
                 // return native menu if pressing control

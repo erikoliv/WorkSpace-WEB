@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>WorkSpace</title>
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
 
@@ -15,23 +16,32 @@
     <link rel="stylesheet" href="/node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="/node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <!-- Custom styles for this template -->
-    <!-- <link href="/home/sidebars.css" rel="stylesheet" -->
-    <link rel="stylesheet" href="/home/sidebars.css">
-    <link rel="stylesheet" href="/busca/busca.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->    
+    <link rel="stylesheet" href="/mainPage/main.css">
 </head>
 
-<body>
-    <style>
-        body {padding: 10px}
-    </style>
-     
-    <main>
-    <div class="card shadow p-5" style="width: 1200px">
-      <div>
+<body class="bg-light">
+    <div>
         <input type="checkbox" id="checkbox">
         <label id="btn" class="btn" for="checkbox"><i class="fa fa-bars"></i> <span>Menu</span></label>
-  
+
         <div class="sidebar">
             <ul>
                 <a href="#">
@@ -64,24 +74,62 @@
             </ul>
         </div>
     </div>
+    <main>
 
 
+        <div id="mainTable" class="container">
 
-        <div class="card-body">
-          <div class="text-left mb-5">
-            <a href="#" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cadastro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>Cadastro de ativos
-          </div>
-          <div class="text-center mb-5">
-            <a href="/busca/busca.html" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consulta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>Consulta de ativos
-          </div>
-          <div class="text-end mb-5">
-            <a href="#" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relatório&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>Relatório de ativos
-          </div>
+            <div class="row align-items-center">
+                <div class="col">
+                    <form class="needs-validation" novalidate action="" method="post" id="">
+                        <div class="row g-3">
+                           
+
+                            <div class="text-left mb-5">
+                                <a href="#" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cadastro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>
+                              </div>
+                              <div class="text-center mb-5">
+                                <a href="/busca/busca.html" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consulta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>
+                              </div>
+                              <div class="text-end mb-5">
+                                <a href="#" class="btn btn-primary btn-lg"><br><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relatório&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br></p></a>
+                              </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            
         </div>
-    </div>
     </main>
-   
-    <!-- <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script> -->
+
+
+    <!-- JQuery core CSS -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap core JS -->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DataTables core CSS -->
+    <script src="/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/node_modules/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/node_modules/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script src="/node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="/node_modules/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+    <script src="/node_modules/datatables.net-select-bs5/js/select.bootstrap5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+    <!-- Custom scripts for this page -->
+    <script src="/busca/busca.js"></script>
+
+    <!-- Custom scripts for this page -->
+    <script src="/home/sidebars.js"></script>
+
 </body>
+
 </html>
